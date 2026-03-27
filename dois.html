@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #000;
+        }
+        video {
+            max-width: 100%;
+            max-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <video id="video" autoplay muted playsinline>
+        <source src="02.mp4" type="video/mp4">
+    </video>
+
+    <script>
+        const video = document.getElementById('video');
+        
+        video.addEventListener('ended', function() {
+            window.location.href = 'tres.html';
+        });
+
+        setTimeout(function() {
+            window.location.href = 'tres.html';
+        }, 7500);
+    </script>
+</body>
+</html>
