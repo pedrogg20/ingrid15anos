@@ -23,3 +23,10 @@ Sempre que o usuário solicitar uma alteração no projeto:
 - Estas regras se aplicam a todos os arquivos do projeto (HTML, CSS, JS, imagens, etc.)
 - A data/hora no backup deve seguir o formato: YYYYMMDDHHMMSS
 - A pasta `backup` está configurada no `.gitignore` para não ser enviada ao repositório remoto
+
+## Atualização do Repositório
+
+Quando o usuário solicitar "atualizar os arquivos do repositório" ou "atualizar o repositório", significa que deve-se:
+1. Executar `git add` nos arquivos alterados
+2. Criar um commit com mensagem descritiva
+3. Executar `git push` para enviar ao repositório remoto
