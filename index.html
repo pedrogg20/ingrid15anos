@@ -94,16 +94,17 @@
 
             setTimeout(function() {
                 renderTela3();
-            }, 5500);
+            }, 10000);
         }
 
         function renderTela3() {
-            app.innerHTML = `
-                <img src="03.png" alt="Contato">
+            const video = document.getElementById('video');
+            const links = `
                 <a href="https://www.google.com/maps/place/R.+We+Sete,+40+-+Guanabara,+Ananindeua+-+PA,+67110-120/@-1.3937545,-48.414925,571m/data=!3m1!1e3!4m6!3m5!1s0x92a48adc8ffe5235:0x58e4ff338c2144e8!8m2!3d-1.3936256!4d-48.4143752!16s%2Fg%2F11c117ggdr?authuser=0&entry=ttu&g_ep=EgoyMDI2MDMyNC4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank" class="link-localizacao" title="Localização"></a>
                 <a href="https://wa.link/c5zmc7" target="_blank" class="link-whatsapp" title="WhatsApp"></a>
             `;
+            video.insertAdjacentHTML('afterend', links);
             document.title = "Contato";
         }
 
