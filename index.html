@@ -47,8 +47,8 @@
 
         .link-localizacao {
             position: absolute;
-            top: 70%;
-            left: 25.5%;
+            top: 75%;
+            left: 10%;
             width: 18%;
             padding-top: 18%;
             border-radius: 50%;
@@ -58,8 +58,8 @@
 
         .link-whatsapp {
             position: absolute;
-            top: 69.5%;
-            left: 56.5%;
+            top: 75%;
+            left: 39%;
             width: 19%;
             padding-top: 19%;
             border-radius: 50%;
@@ -70,7 +70,19 @@
         .hidden {
             display: none !important;
         }
+
+        .link-presentes {
+            position: absolute;
+            top: 75%;
+            left: 70%;
+            width: 19%;
+            padding-top: 19%;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+        }
     </style>
+
 </head>
 
 <body>
@@ -113,6 +125,7 @@
                 <a href="https://www.google.com/maps/place/R.+We+Sete,+40+-+Guanabara,+Ananindeua+-+PA,+67110-120/@-1.3937545,-48.414925,571m/data=!3m1!1e3!4m6!3m5!1s0x92a48adc8ffe5235:0x58e4ff338c2144e8!8m2!3d-1.3936256!4d-48.4143752!16s%2Fg%2F11c117ggdr?authuser=0&entry=ttu&g_ep=EgoyMDI2MDMyNC4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank" class="link-localizacao" title="Localização"></a>
                 <a href="https://wa.link/c5zmc7" target="_blank" class="link-whatsapp" title="WhatsApp"></a>
+                <a href="presentes.html" class="link-presentes" title="Presentes"></a>
             `;
             video.insertAdjacentHTML('afterend', links);
             document.title = "Contato";
