@@ -106,7 +106,6 @@
                 <img src="01.png" alt="Página Inicial">
                 <a href="#" class="link-overlay" title="Avançar" onclick="renderTela2(); return false;"></a>
             `;
-            document.title = "Início";
         }
 
         function renderTela2() {
@@ -115,7 +114,6 @@
                     <source src="01.mp4" type="video/mp4">
                 </video>
             `;
-            document.title = "Vídeo";
 
             const video = document.getElementById('video');
             let transitioned = false;
@@ -141,7 +139,6 @@
                 <a href="presentes.html" class="link-presentes" title="Presentes"></a>
             `;
             video.insertAdjacentHTML('afterend', links);
-            document.title = "Contato";
         }
 
         renderTela1();
