@@ -47,7 +47,7 @@
 
         .link-localizacao {
             position: absolute;
-            top: 79%;
+            top: 75%;
             left: 10%;
             width: 18%;
             padding-top: 18%;
@@ -58,7 +58,7 @@
 
         .link-whatsapp {
             position: absolute;
-            top: 79%;
+            top: 75%;
             left: 39%;
             width: 19%;
             padding-top: 19%;
@@ -73,7 +73,7 @@
 
         .link-presentes {
             position: absolute;
-            top: 79%;
+            top: 75%;
             left: 70%;
             width: 19%;
             padding-top: 19%;
@@ -110,15 +110,15 @@
 
             const video = document.getElementById('video');
             let transitioned = false;
-            let timeoutId = null;
+            let linksShown = false;
 
             video.addEventListener('timeupdate', function () {
-                if (!transitioned && video.duration && video.currentTime >= video.duration - 0.1) {
+                if (!linksShown && video.duration && video.currentTime >= 9) {
+                    linksShown = true;
+                    renderTela3();
+                } else if (!transitioned && video.duration && video.currentTime >= video.duration - 0.1) {
                     transitioned = true;
                     video.pause();
-                    timeoutId = setTimeout(function () {
-                        renderTela3();
-                    }, 2000);
                 }
             });
         }
