@@ -109,17 +109,18 @@
             document.title = "Vídeo";
 
             const video = document.getElementById('video');
+            let transitioned = false;
+            let timeoutId = null;
 
-            video.addEventListener('ended', function () {
-                video.pause();
-                setTimeout(function () {
-                    renderTela3();
-                }, 2000);
+            video.addEventListener('timeupdate', function () {
+                if (!transitioned && video.duration && video.currentTime >= video.duration - 0.1) {
+                    transitioned = true;
+                    video.pause();
+                    timeoutId = setTimeout(function () {
+                        renderTela3();
+                    }, 2000);
+                }
             });
-
-            setTimeout(function () {
-                renderTela3();
-            }, 10000);
         }
 
         function renderTela3() {
